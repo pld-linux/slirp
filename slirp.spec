@@ -30,7 +30,7 @@ Mosaic, CUSeeMe itp.
 cd src
 autoconf
 CFLAGS=$RPM_OPT_FLAGS \
-    ./configure \
+    ./configure %{_target} \
 	--prefix=/usr
 
 make
