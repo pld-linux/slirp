@@ -7,7 +7,6 @@ License:	distributable
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/sourceforge/slirp/%{name}-%{version}.tar.gz
 # Source0-md5:	b712f2fe58aaf87172cfd31c95fc1e31
-# Source0-size:	307169
 URL:		http://slirp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
