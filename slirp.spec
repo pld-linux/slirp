@@ -54,23 +54,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
-%changelog
-* Fri Jan 22 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [1.0c-4d]
-- build against glibc-2.1,
-- added Group(pl),
-- compressed man page && documentation,
-- minor changes.
-
-* Tue Jan 19 1999 Konrad Stêpieñ <konrad@interdata.com.pl>
-  [1.0c-4]
-- Added %attr macros
-- Added polish translation
-
-* Sat Dec 27 1997 Alexey Nogin <nogin@dnttm.ru>
- - Added glibc patch
-
-* Sat Jul 5 1997 Timo Karjalainen <timok@iki.fi>
- - Some changes to specfile
- - Removed unnecessary patch
