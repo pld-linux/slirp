@@ -6,8 +6,7 @@ Release:	5
 Copyright:	distributable
 Group:		Networking/Utilities
 Group(pl):	Sieci/U¿ytki
-#######		ftp://blitzen.canberra.edu.au/pub/slirp
-Source:		%{name}-%{version}.tar.gz
+Source:		ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
 Patch:		slirp-glibc.patch
 URL:		http://blitzen.canberra.edu.au/slirp/
 BuildRoot:	/tmp/%{name}-%{version}-root
