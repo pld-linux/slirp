@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install -s src/slirp $RPM_BUILD_ROOT/usr/bin
+install -s src/slirp $RPM_BUILD_ROOT%{_bindir}
 install src/slirp.man $RPM_BUILD_ROOT%{_mandir}/man1/slirp.1
 
 bzip2 -9 $RPM_BUILD_ROOT%{_mandir}/man1/* ChangeLog README
@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog.bz2 README.bz2 
 
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
