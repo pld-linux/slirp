@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog.bz2 README.bz2 
 
 %attr(755,root,root) /usr/bin/*
-%attr(644,root, man) %{_mandir}/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Fri Jan 22 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
