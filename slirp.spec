@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man1}
 
-install -s src/slirp $RPM_BUILD_ROOT%{_bindir}
+install src/slirp $RPM_BUILD_ROOT%{_bindir}
 install src/slirp.man $RPM_BUILD_ROOT%{_mandir}/man1/slirp.1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* ChangeLog README
