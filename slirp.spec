@@ -9,7 +9,7 @@ Group(pl):	Sieciowe/U¿ytki
 Source:		ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
 Patch:		slirp-glibc.patch
 URL:		http://blitzen.canberra.edu.au/slirp/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Slirp is a TCP/IP emulator which turns an ordinary shell account into a
