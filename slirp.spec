@@ -5,10 +5,6 @@ Version:	1.0c
 Release:	5
 License:	distributable
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
-Group(es):	Red/Utilitarios
-Group(pl):	Sieciowe/Narzêdzia
-Group(pt_BR):	Rede/Utilitários
 Source0:	ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
 Patch0:		%{name}-glibc.patch
 URL:		http://blitzen.canberra.edu.au/slirp/
