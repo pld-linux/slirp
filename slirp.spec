@@ -1,14 +1,13 @@
 Summary:	TCP/IP emulator for a shell account
 Summary(pl):	Emulator TCP/IP dla kont shellowych
 Name:		slirp
-Version:	1.0c
-Release:	6
+Version:	1.0.13
+Release:	0.9
 License:	distributable
 Group:		Networking/Utilities
-Source0:	ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
-# Source0-md5:	62aad016f16b51cbdef4c8e34454f31a
-Patch0:		%{name}-glibc.patch
-URL:		http://blitzen.canberra.edu.au/slirp/
+Source0:	http://dl.sourceforge.net/sourceforge/slirp/%{name}-%{version}.tar.gz
+# Source0-md5:	aaa37a0e6433d177f09ba10145c7d8d3
+URL:		http://slirp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,7 +23,6 @@ Mosaic, CUSeeMe itp.
 
 %prep
 %setup -q
-%patch
 
 %build
 cd src
