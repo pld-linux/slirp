@@ -27,7 +27,7 @@ Mosaic, CUSeeMe itp.
 
 %build
 cd src
-autoconf
+%{__autoconf}
 %configure
 
 %{__make}
