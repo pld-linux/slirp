@@ -5,7 +5,7 @@ Version:	1.0c
 Release:	5
 Copyright:	distributable
 Group:		Networking/Utilities
-Group(pl):	Sieciowe/U¿ytki
+Group(pl):	Sieciowe/Narzêdzia
 Source:		ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
 Patch:		slirp-glibc.patch
 URL:		http://blitzen.canberra.edu.au/slirp/
