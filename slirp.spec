@@ -41,9 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
 install -s src/slirp $RPM_BUILD_ROOT/usr/bin
-install src/slirp.man $RPM_BUILD_ROOT/usr/man/man1/slirp.1
+install src/slirp.man $RPM_BUILD_ROOT%{_mandir}/man1/slirp.1
 
-bzip2 -9 $RPM_BUILD_ROOT/usr/man/man1/* ChangeLog README
+bzip2 -9 $RPM_BUILD_ROOT%{_mandir}/man1/* ChangeLog README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog.bz2 README.bz2 
 
 %attr(755,root,root) /usr/bin/*
-%attr(644,root, man) /usr/man/man1/*
+%attr(644,root, man) %{_mandir}/man1/*
 
 %changelog
 * Fri Jan 22 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
