@@ -6,6 +6,7 @@ Release:	6
 License:	distributable
 Group:		Networking/Utilities
 Source0:	ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
+# Source0-md5:	62aad016f16b51cbdef4c8e34454f31a
 Patch0:		%{name}-glibc.patch
 URL:		http://blitzen.canberra.edu.au/slirp/
 BuildRequires:	autoconf
