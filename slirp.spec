@@ -2,7 +2,7 @@ Summary:	TCP/IP emulator for a shell account
 Summary(pl):	Emulator TCP/IP dla kont shellowych
 Name:		slirp
 Version:	1.0c
-Release:	5
+Release:	6
 License:	distributable
 Group:		Networking/Utilities
 Source0:	ftp://blitzen.canberra.edu.au/pub/slirp/%{name}-%{version}.tar.gz
@@ -34,20 +34,16 @@ cd src
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man1}
 
 install src/slirp $RPM_BUILD_ROOT%{_bindir}
 install src/slirp.man $RPM_BUILD_ROOT%{_mandir}/man1/slirp.1
-
-gzip -9nf ChangeLog README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.gz README.gz
-
+%doc ChangeLog README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
