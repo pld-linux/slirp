@@ -1,5 +1,5 @@
 Summary:	TCP/IP emulator for a shell account
-Summary(pl.UTF-8):   Emulator TCP/IP dla kont shellowych
+Summary(pl.UTF-8):	Emulator TCP/IP dla kont shellowych
 Name:		slirp
 Version:	1.0.16
 Release:	0.1
