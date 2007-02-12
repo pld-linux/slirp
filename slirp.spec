@@ -1,5 +1,5 @@
 Summary:	TCP/IP emulator for a shell account
-Summary(pl):	Emulator TCP/IP dla kont shellowych
+Summary(pl.UTF-8):   Emulator TCP/IP dla kont shellowych
 Name:		slirp
 Version:	1.0.16
 Release:	0.1
@@ -16,9 +16,9 @@ Slirp is a TCP/IP emulator which turns an ordinary shell account into
 a (C)SLIP/PPP account. This allows shell users to use all the funky
 Internet applications like Netscape, Mosaic, CUSeeMe, etc.
 
-%description -l pl
-Slirp pozwala na dostêp SLIP/PPP posiadaczom zwyk³ych kont shellowych.
-Umo¿liwia u¿ywanie wiêkszo¶ci aplikacji sieciowych takich jak Netscape
+%description -l pl.UTF-8
+Slirp pozwala na dostÄ™p SLIP/PPP posiadaczom zwykÅ‚ych kont shellowych.
+UmoÅ¼liwia uÅ¼ywanie wiÄ™kszoÅ›ci aplikacji sieciowych takich jak Netscape
 Mosaic, CUSeeMe itp.
 
 %prep
