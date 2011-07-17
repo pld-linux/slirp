@@ -1,0 +1,14 @@
+--- slirp-1.0.16/src/configure.in.orig	2004-09-01 11:58:50.000000000 +0200
++++ slirp-1.0.16/src/configure.in	2011-07-17 21:06:58.266720716 +0200
+@@ -169,10 +169,7 @@
+ dnl -
+ dnl - Check for libraries
+ dnl -
+-AC_CHECK_LIB(nsl, main)
+-AC_CHECK_LIB(socket, main)
+-AC_CHECK_LIB(posix, main)
+-AC_CHECK_LIB(crypt, main)
++AC_SEARCH_LIBS(crypt, crypt)
+ 
+ dnl -
+ dnl - Check for unix domain sockets

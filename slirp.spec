@@ -1,12 +1,16 @@
 Summary:	TCP/IP emulator for a shell account
 Summary(pl.UTF-8):	Emulator TCP/IP dla kont shellowych
 Name:		slirp
-Version:	1.0.16
-Release:	0.1
-License:	distributable
+Version:	1.0.17
+Release:	1
+License:	BSD
 Group:		Networking/Utilities
-Source0:	http://dl.sourceforge.net/sourceforge/slirp/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/slirp/%{name}-1.0.16.tar.gz
 # Source0-md5:	b712f2fe58aaf87172cfd31c95fc1e31
+Source1:	http://downloads.sourceforge.net/slirp/%{name}_1_0_17_patch.tar.gz
+# Source1-md5:	3662f4b696b6103e736063a31317d6f5
+Patch0:		%{name}-build.patch
+Patch1:		%{name}-link.patch
 URL:		http://slirp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,14 +26,24 @@ Umożliwia używanie większości aplikacji sieciowych takich jak Netscape
 Mosaic, CUSeeMe itp.
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.0.16
+mkdir -p patch
+%{__tar} xzf %{SOURCE1} -C patch
+mv patch/README README-1.0.17
+cd src
+patch -p1 <../patch/fix17.patch
+cd ..
+%patch0 -p1
+%patch1 -p1
 
 %build
 cd src
 %{__autoconf}
 %configure
 
-%{__make}
+# avoid running mkpro, breaks pointers in args
+%{__make} \
+	MAKEPRO='touch $@'
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -43,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README docs TODO 
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%doc COPYRIGHT ChangeLog README README-1.0.17 README.NEXT TODO docs
+%attr(755,root,root) %{_bindir}/slirp
+%{_mandir}/man1/slirp.1*

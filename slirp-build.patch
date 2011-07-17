@@ -1,0 +1,20 @@
+--- slirp-1.0.16/src/mbuf.h.orig	2004-09-01 09:36:45.000000000 +0200
++++ slirp-1.0.16/src/mbuf.h	2011-07-17 17:54:49.496334690 +0200
+@@ -132,6 +132,6 @@ struct mbstat {
+ extern struct	mbstat mbstat;
+ extern int mbuf_alloced;
+ extern struct mbuf m_freelist, m_usedlist;
+-extern mbuf_max;
++extern int mbuf_max;
+ 
+ #endif
+--- slirp-1.0.16/src/ppp.c.orig	2004-09-01 09:36:44.000000000 +0200
++++ slirp-1.0.16/src/ppp.c	2011-07-17 19:37:30.736540990 +0200
+@@ -33,6 +33,7 @@
+  */
+ 
+ #include <config.h>
++#include <ctype.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
